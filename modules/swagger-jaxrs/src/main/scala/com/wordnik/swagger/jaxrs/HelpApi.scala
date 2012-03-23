@@ -21,14 +21,12 @@ import com.wordnik.swagger.core.util.TypeUtil
 
 import org.slf4j.LoggerFactory
 
-import org.apache.commons.lang.StringUtils
-
 import javax.ws.rs.core.{ UriInfo, HttpHeaders }
-import java.rmi.server.Operation
 
 import scala.collection._
 import mutable._
 import scala.collection.JavaConversions._
+import org.apache.commons.lang3.StringUtils
 
 class HelpApi {
   private val LOGGER = LoggerFactory.getLogger(classOf[HelpApi])

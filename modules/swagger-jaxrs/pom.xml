@@ -9,7 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.wordnik</groupId>
     <artifactId>swagger-jaxrs_2.8.1</artifactId>
-    <packaging>jar</packaging>
+  <packaging>bundle</packaging>
     <version>1.02-SNAPSHOT</version>
     <name>swagger-jaxrs</name>
     <build>
@@ -24,6 +24,23 @@
                 <directory>src/test/resources</directory>
             </testResource>
         </testResources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <configuration>
+          <instructions>
+            <Import-Package><![CDATA[
+            javax.ws.rs,
+            javax.ws.rs.core,
+            javax.ws.rs.ext,
+            *
+            ]]>
+            </Import-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
     </build>
     <dependencies>
         <dependency>
@@ -51,12 +68,12 @@
             <version>${servlet-api-version}</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>javax.ws.rs</groupId>
-            <artifactId>jsr311-api</artifactId>
-            <version>1.1.1</version>
-            <scope>compile</scope>
-        </dependency>
+    <!-- <dependency> -->
+    <!--   <groupId>javax.ws.rs</groupId> -->
+    <!--   <artifactId>jsr311-api</artifactId> -->
+    <!--   <version>1.1.1</version> -->
+    <!--   <scope>compile</scope> -->
+    <!-- </dependency> -->
         <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-json</artifactId>
@@ -84,7 +101,7 @@
     </dependencies>
     <properties>
         <servlet-api-version>2.5</servlet-api-version>
-        <jersey-version>1.7</jersey-version>
-        <jackson-version>1.7.7</jackson-version>
+    <jersey-version>1.12</jersey-version>
+    <jackson-version>1.8.3</jackson-version>
     </properties>
 </project>
