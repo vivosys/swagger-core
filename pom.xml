@@ -187,6 +187,21 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.1</version>
 			</plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>${bundle-plugin.version}</version>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Import-Package><![CDATA[
+            *
+            ]]>
+            </Import-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+
 		</plugins>
 		<pluginManagement>
 			<plugins>
@@ -382,7 +397,7 @@
 			</dependency>
 			<dependency>
 				<groupId>commons-lang</groupId>
-				<artifactId>commons-lang</artifactId>
+				<artifactId>commons-lang3</artifactId>
 				<version>${commons-lang-version}</version>
 				<scope>compile</scope>
 			</dependency>
@@ -482,11 +497,12 @@
 		<jackson-version>1.8.3</jackson-version>
 		<junit-version>4.8.1</junit-version>
 		<maven-plugin.version>1.0.0</maven-plugin.version>
-		<commons-lang-version>2.4</commons-lang-version>
+		<commons-lang-version>3.1</commons-lang-version>
 		<slf4j-version>1.6.3</slf4j-version>
 		<mongodb-version>2.6.2</mongodb-version>
 		<scala-test-version>1.5.RC3</scala-test-version>
 		<jetty.maven.version>7.6.0.RC4</jetty.maven.version>
 		<servlet-api-version>2.5</servlet-api-version>
+                <bundle-plugin.version>2.3.6</bundle-plugin.version>
 	</properties>
 </project>
