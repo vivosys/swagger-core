@@ -19,6 +19,10 @@
           <param-name>javax.ws.rs.Application</param-name>
           <param-value>com.wordnik.swagger.sample.resource.JerseyApplication</param-value>
       </init-param>
+      <init-param>
+          <param-name>swagger.config.reader</param-name>
+          <param-value>com.wordnik.swagger.sample.MyConfigReader</param-value>
+      </init-param>
     <init-param>
       <param-name>com.sun.jersey.spi.container.ContainerRequestFilters</param-name>
       <param-value>com.sun.jersey.api.container.filter.PostReplaceFilter</param-value>

@@ -118,6 +118,8 @@ trait ApiSpecParserTrait extends BaseApiParser {
       // Read method annotations for implicit api params which are not declared as actual argments to the method
       // Essentially ApiParamImplicit annotations on method
       val methodAnnotations = method.getAnnotations
+
+      //The following FAILS in OSGI
       for (ma <- methodAnnotations) {
         ma match {
           case pSet: ApiParamsImplicit => {
@@ -147,7 +149,7 @@ trait ApiSpecParserTrait extends BaseApiParser {
               docOperation.addParameter(docParam)
             }
           }
-          case _ => Unit
+          case _ => LOGGER.debug("no match")
         }
       }
 

@@ -35,6 +35,7 @@
             javax.ws.rs.core,
             javax.ws.rs.ext,
             !sun.reflect.generics.reflectiveObjects,
+            scala.*,
             *
             ]]>
             </Import-Package>

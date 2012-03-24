@@ -15,7 +15,9 @@ public class JerseyApplication extends DefaultResourceConfig {
     @Override
     public Set<Class<?>> getClasses() {
         Set<Class<?>> s = new HashSet<Class<?>>();
+
         s.add(JSONContextResolver.class);
+
         s.add(PetResource.class);
         s.add(PetResourceJSON.class);
         s.add(PetStoreResource.class);
@@ -23,6 +25,9 @@ public class JerseyApplication extends DefaultResourceConfig {
         s.add(SampleExceptionMapper.class);
         s.add(UserResource.class);
         s.add(UserResourceJSON.class);
+
+        s.add(SwaggerApiListingResource.class);
+
         return s;
     }
 

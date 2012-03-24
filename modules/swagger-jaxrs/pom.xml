@@ -34,6 +34,7 @@
             javax.ws.rs,
             javax.ws.rs.core,
             javax.ws.rs.ext,
+            scala.*,
             *
             ]]>
             </Import-Package>

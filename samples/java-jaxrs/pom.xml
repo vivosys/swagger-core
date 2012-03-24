@@ -80,7 +80,7 @@
             javax.ws.rs.ext,
             com.sun.jersey.api.core,
             com.sun.jersey.spi.container.servlet,
-            scala.runtime,
+            scala.*,
             *
             ]]>
             </Import-Package>

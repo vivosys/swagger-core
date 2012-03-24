@@ -83,7 +83,7 @@ class JaxrsApiSpecParser(val _hostClass: Class[_], _apiVersion: String, _swagger
 
   override def processParamAnnotations(docParam: DocumentationParameter, paramAnnotations: Array[Annotation], method: Method): Boolean = {
     var ignoreParam = false
-    for (pa <- paramAnnotations) {
+    for (pa : Annotation <- paramAnnotations) {
       pa match {
         case apiParam: ApiParam => parseApiParam(docParam, apiParam, method)
         case wsParam: QueryParam => {
@@ -112,7 +112,7 @@ class JaxrsApiSpecParser(val _hostClass: Class[_], _apiVersion: String, _swagger
           docParam.paramType = readString(TYPE_COOKIE, docParam.paramType)
         }
         case wsParam: Context => ignoreParam = true
-        case _ => Unit
+        case _ => LOGGER.debug("no match")
       }
     }
     ignoreParam

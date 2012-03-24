@@ -286,7 +286,7 @@ private class ApiModelParser(val hostClass: Class[_]) extends BaseApiParser {
         case xmlElementWrapper: XmlElementWrapper => {
           docParam.wrapperName = readString(xmlElementWrapper.name, docParam.wrapperName, "##default")
         }
-        case _ => Unit
+        case _ => LOGGER.debug("no match")
       }
     }
     (isTransient, isXmlElement)
