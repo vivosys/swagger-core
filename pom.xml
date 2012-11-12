@@ -192,6 +192,20 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>2.1</version>
       </plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>${bundle-plugin.version}</version>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Import-Package><![CDATA[
+            *
+            ]]>
+            </Import-Package>
+          </instructions>
+        </configuration>
+      </plugin>
     </plugins>
     <pluginManagement>
       <plugins>
@@ -446,6 +460,7 @@
     <jersey-version>1.13</jersey-version>
     <jackson-version>2.0.4</jackson-version>
     <junit-version>4.8.1</junit-version>
+    <bundle-plugin.version>2.3.6</bundle-plugin.version>
     <commons-lang-version>2.4</commons-lang-version>
     <slf4j-version>1.6.3</slf4j-version>
     <scala-test-version>1.8</scala-test-version>
