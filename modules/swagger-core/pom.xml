@@ -41,6 +41,7 @@
             *
             ]]>
             </Import-Package>
+	    <DynamicImport-Package>*</DynamicImport-Package>
           </instructions>
         </configuration>
       </plugin>
