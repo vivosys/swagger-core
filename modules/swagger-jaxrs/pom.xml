@@ -3,14 +3,12 @@
   <parent>
     <groupId>com.wordnik</groupId>
     <artifactId>swagger-project_2.10.0-RC1</artifactId>
-    <version>1.1.1-SNAPSHOT</version>
+    <version>1.1.1.vivo_1</version>
     <relativePath>../..</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.wordnik</groupId>
   <artifactId>swagger-jaxrs_2.10.0-RC1</artifactId>
   <packaging>bundle</packaging>
-  <version>1.1.1-SNAPSHOT</version>
   <name>swagger-jaxrs</name>
   <build>
     <defaultGoal>install</defaultGoal>
@@ -61,21 +59,18 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>com.wordnik</groupId>
+      <groupId>${project.groupId}</groupId>
       <artifactId>swagger-core_2.10.0-RC1</artifactId>
-      <version>${project.parent.version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>com.wordnik</groupId>
+      <groupId>${project.groupId}</groupId>
       <artifactId>swagger-annotations_2.10.0-RC1</artifactId>
-      <version>${project.parent.version}</version>
-      <scope>compile</scope>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
-      <version>${servlet-api-version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -93,19 +88,16 @@
     <dependency>
       <groupId>com.sun.jersey</groupId>
       <artifactId>jersey-client</artifactId>
-      <version>${jersey-version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.sun.jersey</groupId>
       <artifactId>jersey-core</artifactId>
-      <version>${jersey-version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.sun.jersey</groupId>
       <artifactId>jersey-server</artifactId>
-      <version>${jersey-version}</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>

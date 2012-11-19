@@ -2,15 +2,13 @@
   <parent>
     <groupId>com.wordnik</groupId>
     <artifactId>swagger-project_2.10.0-RC1</artifactId>
-    <version>1.1.1-SNAPSHOT</version>
+    <version>1.1.1.vivo_1</version>
     <relativePath>../..</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.wordnik</groupId>
   <artifactId>swagger-sample-scala-alt-resource-listing_2.10.0-RC1</artifactId>
   <packaging>war</packaging>
   <name>swagger-sample-scala-alt-resource-listing</name>
-  <version>1.1.1-SNAPSHOT</version>
   <build>
     <plugins>
       <plugin>

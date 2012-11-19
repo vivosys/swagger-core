@@ -9,7 +9,7 @@
   <artifactId>swagger-project_2.10.0-RC1</artifactId>
   <packaging>pom</packaging>
   <name>wordnik-swagger-project</name>
-  <version>1.1.1-SNAPSHOT</version>
+  <version>1.1.1.vivo_1</version>
   <url>https://github.com/wordnik/swagger-core</url>
   <scm>
     <connection>scm:git:git@github.com:wordnik/swagger-core.git</connection>
@@ -460,7 +460,7 @@
     <jersey-version>1.13</jersey-version>
     <jackson-version>2.0.4</jackson-version>
     <junit-version>4.8.1</junit-version>
-    <bundle-plugin.version>2.3.6</bundle-plugin.version>
+    <bundle-plugin.version>2.3.7</bundle-plugin.version>
     <commons-lang-version>2.4</commons-lang-version>
     <slf4j-version>1.6.3</slf4j-version>
     <scala-test-version>1.8</scala-test-version>
